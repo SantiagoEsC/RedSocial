@@ -41,18 +41,18 @@ class _LoginPageState extends State<LoginPage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         const Text(
-                          "Groupie",
+                          "Iniciar sesión",
                           style: TextStyle(
                               fontSize: 40, fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 10),
-                        const Text("Login now to see what they are talking!",
+                        const Text("Inicia sesión ahora para interactuar",
                             style: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.w400)),
                         Image.asset("assets/login.png"),
                         TextFormField(
                           decoration: textInputDecoration.copyWith(
-                              labelText: "Email",
+                              labelText: "Correo",
                               prefixIcon: Icon(
                                 Icons.email,
                                 color: Theme.of(context).primaryColor,
@@ -69,21 +69,21 @@ class _LoginPageState extends State<LoginPage> {
                                         r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
                                     .hasMatch(val!)
                                 ? null
-                                : "Please enter a valid email";
+                                : "Por favor ingresa un correo válido";
                           },
                         ),
                         const SizedBox(height: 15),
                         TextFormField(
                           obscureText: true,
                           decoration: textInputDecoration.copyWith(
-                              labelText: "Password",
+                              labelText: "Contraseña",
                               prefixIcon: Icon(
                                 Icons.lock,
                                 color: Theme.of(context).primaryColor,
                               )),
                           validator: (val) {
                             if (val!.length < 6) {
-                              return "Password must be at least 6 characters";
+                              return "La contraseña debe tener al menos 6 carácteres";
                             } else {
                               return null;
                             }
@@ -106,7 +106,7 @@ class _LoginPageState extends State<LoginPage> {
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(30))),
                             child: const Text(
-                              "Sign In",
+                              "Iniciar sesión",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 16),
                             ),
@@ -119,12 +119,12 @@ class _LoginPageState extends State<LoginPage> {
                           height: 10,
                         ),
                         Text.rich(TextSpan(
-                          text: "Don't have an account? ",
+                          text: "¿No tienes cuenta? ",
                           style: const TextStyle(
                               color: Colors.black, fontSize: 14),
                           children: <TextSpan>[
                             TextSpan(
-                                text: "Register here",
+                                text: "¡Regístrate ahora!",
                                 style: const TextStyle(
                                     color: Colors.black,
                                     decoration: TextDecoration.underline),

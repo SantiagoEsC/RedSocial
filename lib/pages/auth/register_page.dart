@@ -38,19 +38,19 @@ class _RegisterPageState extends State<RegisterPage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         const Text(
-                          "Groupie",
+                          "Registrar",
                           style: TextStyle(
                               fontSize: 40, fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 10),
                         const Text(
-                            "Create your account now to chat and explore",
+                            "Crea una cuenta ahora para explorar",
                             style: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.w400)),
                         Image.asset("assets/register.png"),
                         TextFormField(
                           decoration: textInputDecoration.copyWith(
-                              labelText: "Full Name",
+                              labelText: "Nombre completo",
                               prefixIcon: Icon(
                                 Icons.person,
                                 color: Theme.of(context).primaryColor,
@@ -64,7 +64,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             if (val!.isNotEmpty) {
                               return null;
                             } else {
-                              return "Name cannot be empty";
+                              return "El mombre no puede estar vacío";
                             }
                           },
                         ),
@@ -73,7 +73,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         ),
                         TextFormField(
                           decoration: textInputDecoration.copyWith(
-                              labelText: "Email",
+                              labelText: "Correo",
                               prefixIcon: Icon(
                                 Icons.email,
                                 color: Theme.of(context).primaryColor,
@@ -90,21 +90,21 @@ class _RegisterPageState extends State<RegisterPage> {
                                         r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
                                     .hasMatch(val!)
                                 ? null
-                                : "Please enter a valid email";
+                                : "Por favor ingresa un correo válido";
                           },
                         ),
                         const SizedBox(height: 15),
                         TextFormField(
                           obscureText: true,
                           decoration: textInputDecoration.copyWith(
-                              labelText: "Password",
+                              labelText: "Contraseña",
                               prefixIcon: Icon(
                                 Icons.lock,
                                 color: Theme.of(context).primaryColor,
                               )),
                           validator: (val) {
                             if (val!.length < 6) {
-                              return "Password must be at least 6 characters";
+                              return "La contraseña debe tener al menos 6 carácteres ";
                             } else {
                               return null;
                             }
@@ -127,7 +127,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(30))),
                             child: const Text(
-                              "Register",
+                              "Registrar",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 16),
                             ),
@@ -140,12 +140,12 @@ class _RegisterPageState extends State<RegisterPage> {
                           height: 10,
                         ),
                         Text.rich(TextSpan(
-                          text: "Already have an account? ",
+                          text: "Ya tengo cuenta ",
                           style: const TextStyle(
                               color: Colors.black, fontSize: 14),
                           children: <TextSpan>[
                             TextSpan(
-                                text: "Login now",
+                                text: "Inicia sesión ahora",
                                 style: const TextStyle(
                                     color: Colors.black,
                                     decoration: TextDecoration.underline),
