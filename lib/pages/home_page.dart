@@ -245,7 +245,7 @@ class _HomePageState extends State<HomePage> {
                   },
                   style: ElevatedButton.styleFrom(
                       primary: Theme.of(context).primaryColor),
-                  child: const Text("CANCEL"),
+                  child: const Text("CANCELAR"),
                 ),
                 ElevatedButton(
                   onPressed: () async {
@@ -267,7 +267,7 @@ class _HomePageState extends State<HomePage> {
                   },
                   style: ElevatedButton.styleFrom(
                       primary: Theme.of(context).primaryColor),
-                  child: const Text("CREATE"),
+                  child: const Text("CREAR"),
                 )
               ],
             );
@@ -330,7 +330,7 @@ class _HomePageState extends State<HomePage> {
             height: 20,
           ),
           const Text(
-            "Aún no estás en un grupo, presiona en el ícono de añadir para crear un grupo o buscar uno existente.",            
+            "Aún no estás en un grupo. Presiona en el ícono de añadir para crear un grupo o buscar uno existente.",            
             textAlign: TextAlign.center,
           )
         ],

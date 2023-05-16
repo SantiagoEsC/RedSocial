@@ -48,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                         const SizedBox(height: 10),
                         const Text("Inicia sesión ahora para interactuar",
                             style: TextStyle(
-                                fontSize: 15, fontWeight: FontWeight.w400)),
+                                fontSize: 15, fontWeight: FontWeight.w400, color: Color(0xFF797c81))),
                         Image.asset("assets/login.png"),
                         TextFormField(
                           decoration: textInputDecoration.copyWith(
@@ -126,7 +126,7 @@ class _LoginPageState extends State<LoginPage> {
                             TextSpan(
                                 text: "¡Regístrate ahora!",
                                 style: const TextStyle(
-                                    color: Colors.black,
+                                    color: Color(0xFF7f56da),
                                     decoration: TextDecoration.underline),
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () {
@@ -159,7 +159,7 @@ class _LoginPageState extends State<LoginPage> {
           await HelperFunctions.saveUserNameSF(snapshot.docs[0]['fullName']);
           nextScreenReplace(context, const HomePage());
         } else {
-          showSnackbar(context, Colors.red, value);
+          showSnackbar(context, Color(0xFF7f56da), value);
           setState(() {
             _isLoading = false;
           });

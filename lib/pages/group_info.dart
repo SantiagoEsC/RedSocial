@@ -52,7 +52,7 @@ class _GroupInfoState extends State<GroupInfo> {
         centerTitle: true,
         elevation: 0,
         backgroundColor: Theme.of(context).primaryColor,
-        title: const Text("Group Info"),
+        title: const Text("Información del grupo"),
         actions: [
           IconButton(
               onPressed: () {
@@ -61,9 +61,9 @@ class _GroupInfoState extends State<GroupInfo> {
                     context: context,
                     builder: (context) {
                       return AlertDialog(
-                        title: const Text("Exit"),
+                        title: const Text("Salir"),
                         content:
-                            const Text("Are you sure you exit the group? "),
+                            const Text("¿Estás seguro que quieres salir del grupo?"),
                         actions: [
                           IconButton(
                             onPressed: () {
@@ -182,12 +182,12 @@ class _GroupInfoState extends State<GroupInfo> {
               );
             } else {
               return const Center(
-                child: Text("NO MEMBERS"),
+                child: Text("SIN MIEMBROS"),
               );
             }
           } else {
             return const Center(
-              child: Text("NO MEMBERS"),
+              child: Text("SIN MIEMBROS"),
             );
           }
         } else {

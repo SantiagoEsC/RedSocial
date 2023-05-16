@@ -147,7 +147,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             TextSpan(
                                 text: "Inicia sesión ahora",
                                 style: const TextStyle(
-                                    color: Colors.black,
+                                    color: Color(0xFF7f56da),
                                     decoration: TextDecoration.underline),
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () {

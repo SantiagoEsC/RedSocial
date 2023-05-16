@@ -59,7 +59,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             leading: const Icon(Icons.group),
             title: const Text(
-              "Groups",
+              "Grupos",
               style: TextStyle(color: Colors.black),
             ),
           ),
@@ -71,7 +71,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             leading: const Icon(Icons.group),
             title: const Text(
-              "Profile",
+              "Perfil",
               style: TextStyle(color: Colors.black),
             ),
           ),
@@ -82,8 +82,8 @@ class _ProfilePageState extends State<ProfilePage> {
                   context: context,
                   builder: (context) {
                     return AlertDialog(
-                      title: const Text("Logout"),
-                      content: const Text("Are you sure you want to logout?"),
+                      title: const Text("Cerrar sesión"),
+                      content: const Text("¿Estás seguro de que quieres cerrar tu sesión?"),
                       actions: [
                         IconButton(
                           onPressed: () {
@@ -115,13 +115,14 @@ class _ProfilePageState extends State<ProfilePage> {
                 const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             leading: const Icon(Icons.exit_to_app),
             title: const Text(
-              "Logout",
+              "Salir",
               style: TextStyle(color: Colors.black),
             ),
           )
         ],
       )),
       body: Container(
+        child: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 170),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -137,7 +138,7 @@ class _ProfilePageState extends State<ProfilePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text("Full Name", style: TextStyle(fontSize: 17)),
+                const Text("Nombre completo", style: TextStyle(fontSize: 17)),
                 Text(widget.userName, style: const TextStyle(fontSize: 17)),
               ],
             ),
@@ -152,6 +153,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ],
             ),
           ],
+        ),
         ),
       ),
     );
