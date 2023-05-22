@@ -1,5 +1,17 @@
-2023/05/15-18:32:20.696 2548 Log #3: 1 ops saved to Table #4 OK
-2023/05/15-18:32:20.739 2548 Archiving C:\Users\Anthony\AppData\Local\Temp\flutter_tools.4163a1a8\flutter_tools_chrome_device.21a63505\Default\Site Characteristics Database/000003.log: OK
-2023/05/15-18:32:20.739 2548 Table #4: 1 entries OK
-2023/05/15-18:32:20.849 2548 Archiving C:\Users\Anthony\AppData\Local\Temp\flutter_tools.4163a1a8\flutter_tools_chrome_device.21a63505\Default\Site Characteristics Database/MANIFEST-000001: OK
-2023/05/15-18:32:21.166 2548 **** Repaired leveldb C:\Users\Anthony\AppData\Local\Temp\flutter_tools.4163a1a8\flutter_tools_chrome_device.21a63505\Default\Site Characteristics Database; recovered 1 files; 130 bytes. Some data may have been lost. ****
+2023/05/21-14:02:42.998 295c Reusing MANIFEST C:\Users\Anthony\AppData\Local\Temp\flutter_tools.daaee8dd\flutter_tools_chrome_device.356c5d6\Default\Site Characteristics Database/MANIFEST-000001
+2023/05/21-14:02:43.003 295c Recovering log #3
+2023/05/21-14:02:43.003 295c Level-0 table #10: started
+2023/05/21-14:02:43.014 295c Level-0 table #10: 130 bytes OK
+2023/05/21-14:02:43.015 295c Recovering log #6
+2023/05/21-14:02:43.015 295c Level-0 table #11: started
+2023/05/21-14:02:43.029 295c Level-0 table #11: 165 bytes OK
+2023/05/21-14:02:43.031 295c Recovering log #10
+2023/05/21-14:02:43.033 295c Reusing old log C:\Users\Anthony\AppData\Local\Temp\flutter_tools.daaee8dd\flutter_tools_chrome_device.356c5d6\Default\Site Characteristics Database/000010.log 
+2023/05/21-14:02:43.042 295c Delete type=0 #3
+2023/05/21-14:02:43.042 295c Delete type=0 #6
+2023/05/21-14:02:43.043 2cb0 Compacting 2@0 + 0@1 files
+2023/05/21-14:02:43.051 2cb0 Generated table #12@0: 1 keys, 165 bytes
+2023/05/21-14:02:43.051 2cb0 Compacted 2@0 + 0@1 files => 165 bytes
+2023/05/21-14:02:43.057 2cb0 compacted to: files[ 3 1 0 0 0 0 0 ]
+2023/05/21-14:02:43.058 2cb0 Delete type=2 #8
+2023/05/21-14:02:43.059 2cb0 Delete type=2 #11

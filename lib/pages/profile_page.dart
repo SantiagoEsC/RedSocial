@@ -23,7 +23,7 @@ class _ProfilePageState extends State<ProfilePage> {
         backgroundColor: Theme.of(context).primaryColor,
         elevation: 0,
         title: const Text(
-          "Profile",
+          "Perfil",
           style: TextStyle(
               color: Colors.white, fontSize: 27, fontWeight: FontWeight.bold),
         ),
@@ -35,7 +35,7 @@ class _ProfilePageState extends State<ProfilePage> {
           Icon(
             Icons.account_circle,
             size: 150,
-            color: Colors.grey[700],
+            color: Theme.of(context).primaryColor,
           ),
           const SizedBox(
             height: 15,
@@ -57,7 +57,7 @@ class _ProfilePageState extends State<ProfilePage> {
             },
             contentPadding:
                 const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-            leading: const Icon(Icons.group),
+            leading: const Icon(Icons.group, color: Color(0xFF2b59a2)),
             title: const Text(
               "Grupos",
               style: TextStyle(color: Colors.black),
@@ -69,7 +69,7 @@ class _ProfilePageState extends State<ProfilePage> {
             selectedColor: Theme.of(context).primaryColor,
             contentPadding:
                 const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-            leading: const Icon(Icons.group),
+            leading: const Icon(Icons.person, color: Color(0xFF715696)),
             title: const Text(
               "Perfil",
               style: TextStyle(color: Colors.black),
@@ -113,7 +113,7 @@ class _ProfilePageState extends State<ProfilePage> {
             },
             contentPadding:
                 const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-            leading: const Icon(Icons.exit_to_app),
+            leading: const Icon(Icons.exit_to_app, color: Colors.red,),
             title: const Text(
               "Salir",
               style: TextStyle(color: Colors.black),
@@ -127,10 +127,13 @@ class _ProfilePageState extends State<ProfilePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Icon(
-              Icons.account_circle,
-              size: 200,
-              color: Colors.grey[700],
+            IconButton(
+              onPressed: (){},
+              color: Theme.of(context).primaryColor,
+              iconSize: 200,
+              icon: Icon(
+              Icons.account_circle
+            ),
             ),
             const SizedBox(
               height: 15,
@@ -138,7 +141,7 @@ class _ProfilePageState extends State<ProfilePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text("Nombre completo", style: TextStyle(fontSize: 17)),
+                const Text("Nombre completo", style: TextStyle(fontSize: 17, color: Colors.black, fontWeight: FontWeight.bold)),
                 Text(widget.userName, style: const TextStyle(fontSize: 17)),
               ],
             ),
@@ -148,7 +151,7 @@ class _ProfilePageState extends State<ProfilePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text("Email", style: TextStyle(fontSize: 17)),
+                const Text("Email", style: TextStyle(fontSize: 17, color: Colors.black, fontWeight: FontWeight.bold)),
                 Text(widget.email, style: const TextStyle(fontSize: 17)),
               ],
             ),

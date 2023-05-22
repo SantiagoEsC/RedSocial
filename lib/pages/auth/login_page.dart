@@ -42,27 +42,36 @@ class _LoginPageState extends State<LoginPage> {
                       children: <Widget>[
                         const Text(
                           "Iniciar sesión",
-                          style: TextStyle(
-                              fontSize: 40, fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Colors.black,
+                              fontSize: 35, fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 10),
-                        const Text("Inicia sesión ahora para interactuar",
+                        const Text("¡Interactua ahora con comunidades y amigos!",
                             style: TextStyle(
-                                fontSize: 15, fontWeight: FontWeight.w400, color: Color(0xFF797c81))),
-                        Image.asset("assets/login.png"),
+                                fontSize: 15, fontWeight: FontWeight.w400, color: Color(0xFF999999))),
+                        // Image.asset("assets/login.png"),
                         TextFormField(
-                          decoration: textInputDecoration.copyWith(
+                          cursorColor: Color(0xFFF28500),
+                          style: TextStyle(color: Colors.black),
+                          decoration: InputDecoration(
                               labelText: "Correo",
+                              labelStyle: TextStyle(
+                                color: Color(0xFF999999),
+                              ),
                               prefixIcon: Icon(
                                 Icons.email,
-                                color: Theme.of(context).primaryColor,
-                              )),
+                                color: Color(0xFFF28500),
+                              ),
+                              focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(width: 2, color: Color(0xFFF28500))),
+                              enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(width: 2, color: Color(0xFFF28500)),),
+                              ),
                           onChanged: (val) {
                             setState(() {
                               email = val;
                             });
                           },
-
                           // check tha validation
                           validator: (val) {
                             return RegExp(
@@ -74,13 +83,22 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         const SizedBox(height: 15),
                         TextFormField(
+                          cursorColor: Color(0xFFF28500),
+                          style: TextStyle(color: Colors.black),
                           obscureText: true,
-                          decoration: textInputDecoration.copyWith(
+                          decoration: InputDecoration(
                               labelText: "Contraseña",
+                              labelStyle: TextStyle(
+                                color: Color(0xFF999999)),
                               prefixIcon: Icon(
                                 Icons.lock,
-                                color: Theme.of(context).primaryColor,
-                              )),
+                                color: Color(0xFFF28500),
+                              ),
+                              focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(width: 2, color: Color(0xFFF28500))),
+                              enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(width: 2, color: Color(0xFFF28500))),
+                              ),
                           validator: (val) {
                             if (val!.length < 6) {
                               return "La contraseña debe tener al menos 6 carácteres";
@@ -125,8 +143,8 @@ class _LoginPageState extends State<LoginPage> {
                           children: <TextSpan>[
                             TextSpan(
                                 text: "¡Regístrate ahora!",
-                                style: const TextStyle(
-                                    color: Color(0xFF7f56da),
+                                style: TextStyle(
+                                    color: Color(0xFFF28500),
                                     decoration: TextDecoration.underline),
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () {
@@ -159,7 +177,7 @@ class _LoginPageState extends State<LoginPage> {
           await HelperFunctions.saveUserNameSF(snapshot.docs[0]['fullName']);
           nextScreenReplace(context, const HomePage());
         } else {
-          showSnackbar(context, Color(0xFF7f56da), value);
+          showSnackbar(context, Colors.white, value);
           setState(() {
             _isLoading = false;
           });

@@ -38,23 +38,34 @@ class _RegisterPageState extends State<RegisterPage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         const Text(
-                          "Registrar",
+                          "Iniciar sesión",
                           style: TextStyle(
+                            color: Colors.black,
                               fontSize: 40, fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 10),
-                        const Text(
-                            "Crea una cuenta ahora para explorar",
-                            style: TextStyle(
-                                fontSize: 15, fontWeight: FontWeight.w400)),
-                        Image.asset("assets/register.png"),
+                         const Text(
+                             "¡Crea una cuenta ahora para empezar a explorar!",
+                             style: TextStyle(
+                               color: Color(0xFF999999),
+                                 fontSize: 15, fontWeight: FontWeight.w400)),
+                        //  Image.asset("assets/register.png"),
                         TextFormField(
+                          cursorColor: Color(0xFFF28500),
+                          style: TextStyle(color: Colors.black),
                           decoration: textInputDecoration.copyWith(
                               labelText: "Nombre completo",
+                              labelStyle: TextStyle(
+                              color: Color(0xFF999999),
+                              ),
                               prefixIcon: Icon(
-                                Icons.person,
-                                color: Theme.of(context).primaryColor,
-                              )),
+                              Icons.person,
+                              color: Color(0xFFF28500)),  
+                              focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(width: 2, color: Color(0xFFF28500))),
+                              enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(width: 2, color: Color(0xFFF28500)),),
+                              ),              
                           onChanged: (val) {
                             setState(() {
                               fullName = val;
@@ -72,12 +83,21 @@ class _RegisterPageState extends State<RegisterPage> {
                           height: 15,
                         ),
                         TextFormField(
+                          cursorColor: Color(0xFFF28500),
+                          style: TextStyle(color: Colors.black),
                           decoration: textInputDecoration.copyWith(
                               labelText: "Correo",
+                              labelStyle: TextStyle(
+                                color: Color(0xFF999999)),
                               prefixIcon: Icon(
                                 Icons.email,
-                                color: Theme.of(context).primaryColor,
-                              )),
+                                color: Color(0xFFF28500),
+                              ),
+                              focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(width: 2, color: Color(0xFFF28500))),
+                              enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(width: 2, color: Color(0xFFF28500))),
+                              ),
                           onChanged: (val) {
                             setState(() {
                               email = val;
@@ -95,13 +115,22 @@ class _RegisterPageState extends State<RegisterPage> {
                         ),
                         const SizedBox(height: 15),
                         TextFormField(
+                          cursorColor: Color(0xFFF28500),
+                          style: TextStyle(color: Colors.black),
                           obscureText: true,
                           decoration: textInputDecoration.copyWith(
                               labelText: "Contraseña",
+                              labelStyle: TextStyle(
+                              color: Color(0xFF999999)),
                               prefixIcon: Icon(
                                 Icons.lock,
-                                color: Theme.of(context).primaryColor,
-                              )),
+                                color: Color(0xFFF28500),
+                              ),
+                              focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(width: 2, color: Color(0xFFF28500))),
+                              enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(width: 2, color: Color(0xFFF28500))),
+                              ),
                           validator: (val) {
                             if (val!.length < 6) {
                               return "La contraseña debe tener al menos 6 carácteres ";
@@ -127,7 +156,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(30))),
                             child: const Text(
-                              "Registrar",
+                              "Registrarse",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 16),
                             ),
@@ -145,9 +174,9 @@ class _RegisterPageState extends State<RegisterPage> {
                               color: Colors.black, fontSize: 14),
                           children: <TextSpan>[
                             TextSpan(
-                                text: "Inicia sesión ahora",
+                                text: "¡Inicia sesión ahora!",
                                 style: const TextStyle(
-                                    color: Color(0xFF7f56da),
+                                    color: Color(0xFFF28500),
                                     decoration: TextDecoration.underline),
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () {

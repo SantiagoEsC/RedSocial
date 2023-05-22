@@ -182,12 +182,12 @@ class _SearchPageState extends State<SearchPage> {
                   ChatPage(
                       groupId: groupId,
                       groupName: groupName,
-                      userName: userName));
+                      userName: userName,));
             });
           } else {
             setState(() {
               isJoined = !isJoined;
-              showSnackbar(context, Colors.red, "Dejar grupo $groupName");
+              showSnackbar(context, Colors.red, "Haz dejado grupo $groupName");
             });
           }
         },
@@ -195,13 +195,13 @@ class _SearchPageState extends State<SearchPage> {
             ? Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.black,
+                  color: Theme.of(context).primaryColor,
                   border: Border.all(color: Colors.white, width: 1),
                 ),
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 child: const Text(
-                  "Unido",
+                  "Salir",
                   style: TextStyle(color: Colors.white),
                 ),
               )

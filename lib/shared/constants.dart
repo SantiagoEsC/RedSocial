@@ -5,6 +5,6 @@ class Constants {
   static String apiKey = "AIzaSyCWBuLeP_k0NxaXn7ZR8ip2Re7LVKHCHCc";
   static String messagingSenderId = "188662397737";
   static String projectId = "chatapp-c6557";
-  final primaryColor = const Color(0xFF7f56da);
+  final primaryColor = const Color(0xFFF28500);
   final primaryBox = const Color(0xFFe8e8ea);
 }

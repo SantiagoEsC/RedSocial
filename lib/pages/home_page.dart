@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                 nextScreen(context, const SearchPage());
               },
               icon: const Icon(
-                Icons.search,
+                Icons.search, color: Colors.white,
               ))
         ],
         elevation: 0,
@@ -79,17 +79,18 @@ class _HomePageState extends State<HomePage> {
         title: const Text(
           "Grupos",
           style: TextStyle(
-              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 27),
+              color: Colors.white, fontSize: 27),
         ),
       ),
       drawer: Drawer(
+        backgroundColor: Colors.white,
           child: ListView(
         padding: const EdgeInsets.symmetric(vertical: 50),
         children: <Widget>[
           Icon(
             Icons.account_circle,
             size: 150,
-            color: Colors.grey[700],
+            color: Theme.of(context).primaryColor,
           ),
           const SizedBox(
             height: 15,
@@ -97,7 +98,7 @@ class _HomePageState extends State<HomePage> {
           Text(
             userName,
             textAlign: TextAlign.center,
-            style: const TextStyle(fontWeight: FontWeight.bold),
+            style: const TextStyle(color: Colors.black),
           ),
           const SizedBox(
             height: 30,
@@ -107,11 +108,11 @@ class _HomePageState extends State<HomePage> {
           ),
           ListTile(
             onTap: () {},
-            selectedColor: Theme.of(context).primaryColor,
+            selectedColor: Color(0xFF828283),
             selected: true,
             contentPadding:
-                const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-            leading: const Icon(Icons.group),
+            const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+            leading: const Icon(Icons.group, color: Color(0xFF2b59a2)),
             title: const Text(
               "Grupos",
               style: TextStyle(color: Colors.black),
@@ -127,8 +128,8 @@ class _HomePageState extends State<HomePage> {
                   ));
             },
             contentPadding:
-                const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-            leading: const Icon(Icons.group),
+            const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+            leading: const Icon(Icons.person, color: Color(0xFF715696)),
             title: const Text(
               "Perfil",
               style: TextStyle(color: Colors.black),
@@ -172,7 +173,7 @@ class _HomePageState extends State<HomePage> {
             },
             contentPadding:
                 const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-            leading: const Icon(Icons.exit_to_app),
+            leading: const Icon(Icons.exit_to_app, color: Colors.red),
             title: const Text(
               "Cerrar sesión",
               style: TextStyle(color: Colors.black),
@@ -290,7 +291,7 @@ class _HomePageState extends State<HomePage> {
                   return GroupTile(
                       groupId: getId(snapshot.data['groups'][reverseIndex]),
                       groupName: getName(snapshot.data['groups'][reverseIndex]),
-                      userName: snapshot.data['fullName']);
+                      userName: snapshot.data['fullName'],);
                 },
               );
             } else {
