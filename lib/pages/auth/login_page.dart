@@ -41,7 +41,7 @@ class _LoginPageState extends State<LoginPage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         const Text(
-                          "Iniciar sesión",
+                          "Inicia sesión",
                           style: TextStyle(color: Colors.black,
                               fontSize: 35, fontWeight: FontWeight.bold),
                         ),
@@ -49,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
                         const Text("¡Interactua ahora con comunidades y amigos!",
                             style: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.w400, color: Color(0xFF999999))),
-                        // Image.asset("assets/login.png"),
+                        Image.asset("assets/login.png"),
                         TextFormField(
                           cursorColor: Color(0xFFF28500),
                           style: TextStyle(color: Colors.black),

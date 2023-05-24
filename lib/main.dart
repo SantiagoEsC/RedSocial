@@ -60,31 +60,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
-class PhotoPreviewScreen extends StatefulWidget {
-  @override
-  _PhotoPreviewScreenState createState() => _PhotoPreviewScreenState();
-}
-
-class _PhotoPreviewScreenState extends State<PhotoPreviewScreen> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            _setImageView()
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          _showSelectionDialog(context);
-        },
-        child: Icon(Icons.camera_alt),
-      ),
-
-    );
-  }
-}

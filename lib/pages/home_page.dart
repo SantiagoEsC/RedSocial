@@ -217,6 +217,7 @@ class _HomePageState extends State<HomePage> {
                               color: Theme.of(context).primaryColor),
                         )
                       : TextField(
+                        cursorColor: Color(0xFFF28500),
                           onChanged: (val) {
                             setState(() {
                               groupName = val;
@@ -245,7 +246,7 @@ class _HomePageState extends State<HomePage> {
                     Navigator.of(context).pop();
                   },
                   style: ElevatedButton.styleFrom(
-                      primary: Theme.of(context).primaryColor),
+                      primary: Colors.red),
                   child: const Text("CANCELAR"),
                 ),
                 ElevatedButton(
@@ -267,7 +268,7 @@ class _HomePageState extends State<HomePage> {
                     }
                   },
                   style: ElevatedButton.styleFrom(
-                      primary: Theme.of(context).primaryColor),
+                      primary: Colors.green),
                   child: const Text("CREAR"),
                 )
               ],

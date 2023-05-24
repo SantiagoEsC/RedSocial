@@ -38,7 +38,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         const Text(
-                          "Iniciar sesión",
+                          "Regístrate",
                           style: TextStyle(
                             color: Colors.black,
                               fontSize: 40, fontWeight: FontWeight.bold),
@@ -49,7 +49,7 @@ class _RegisterPageState extends State<RegisterPage> {
                              style: TextStyle(
                                color: Color(0xFF999999),
                                  fontSize: 15, fontWeight: FontWeight.w400)),
-                        //  Image.asset("assets/register.png"),
+                        Image.asset("assets/register.png"),
                         TextFormField(
                           cursorColor: Color(0xFFF28500),
                           style: TextStyle(color: Colors.black),
