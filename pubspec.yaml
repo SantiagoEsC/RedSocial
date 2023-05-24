@@ -36,6 +36,10 @@ dependencies:
     sdk: flutter
   shared_preferences: ^2.1.0
 
+flutter_icons:
+  image_path: "assets/icono.png"
+  android: true 
+  ios: true
 dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:
